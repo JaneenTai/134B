@@ -6,20 +6,48 @@
     <title>Reach Out</title>
 </head>
 <body>
-    <h1>Get in Touch</h1>
+    <header id="nav_bar">
+        <!-- navigation bar -> eventually replace with links to new pages? -->
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Me</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./resume.html">Resume</a></li>
+                <li><a href="./contact.html">Reach Out</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="user_info">
-        <label for="name">Your Name</label>
+    <h1>Get in Touch!</h1>
 
-        <input
-            type="text"
-            id="name"
-            name="name"/><br>
+    <div id="user_info">
+        <fieldset>
+            <legend>Send me your information!</legend>
 
-        <label for="story">Message</label><br>
-        <textarea id="message" name="story" rows="5" cols="33"></textarea>
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"/><br>
+
+            <label for="name">Email</label>
+            <input
+                type="text"
+                id="email"
+                name="email"/><br>
+
+            <label for="story">Anything else you want me to know!</label><br>
+            <textarea id="message" name="story" rows="5" cols="33"></textarea>
+
+            <button popovertarget="my-dialog">Submit</button>
+
+            <dialog id="my-dialog" popover>
+                <p>Thank you! Hope to get in contact soon!</p>
+                <button popovertarget="my-dialog" popovertargetaction="hide">Close</button>
+            </dialog>
+        </fieldset>
     </div>
 
-    <a href="./index.html">link back testing</a>
 </body>
 </html>
